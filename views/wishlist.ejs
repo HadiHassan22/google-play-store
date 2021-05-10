@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Google Play Store</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/play.svg" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#!">
+          <img
+            src="assets/favicon.svg"
+            alt=""
+            width="150"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/all-apps">
+                Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <% if(!user) { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Sign Up</a>
+            </li>
+            <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/visited">Recently Visited</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/wishlist">Wishlist</a>
+            </li>
+            <li class="nav-item">
+              <img
+                width="30"
+                src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+                class="rounded-circle my-1"
+              />
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <h3 class="my-4 text-dark">Explore</h3>
+          <div class="list-group">
+            <a class="list-group-item text-secondary" href="/all-apps">Apps</a>
+            <a class="list-group-item text-success" href="/all-games">Games</a>
+            <a class="list-group-item text-info" href="/all-books">Books</a>
+            <a class="list-group-item text-danger" href="/all-movies">Movies</a>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <h2 class="my-4 text-dark">Your Wishlist</h2>
+          <div class="row">
+            <div class="col-lg-9 col-md-9 mb-4">
+              <div class="card rounded h-100">
+                <a href="#!"
+                  ><img
+                    class="card-img-top"
+                    src="https://via.placeholder.com/700x400"
+                    alt="..."
+                /></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <p>Uber Eats</p>
+                  </h4>
+                  <h5>9.99</h5>
+                </div>
+                <div class="card-footer bg-light">
+                  <small class="text-muted">★ ★ ★ ★ ☆</small>
+                  <a class="btn btn-success ml-5" onclick="" href="#!"
+                    >Remove from wishlist</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 mb-4">
+              <div class="card rounded h-100">
+                <a href="#!"
+                  ><img
+                    class="card-img-top"
+                    src="https://via.placeholder.com/700x400"
+                    alt="..."
+                /></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <p>Zomato</p>
+                  </h4>
+                  <h5>9.99</h5>
+                </div>
+                <div class="card-footer bg-light">
+                  <small class="text-muted">★ ★ ★ ★ ☆</small>
+                  <a class="btn btn-success ml-5" onclick="" href="#!"
+                    >Remove from wishlist</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 mb-4">
+              <div class="card rounded h-100">
+                <a href="#!"
+                  ><img
+                    class="card-img-top"
+                    src="https://via.placeholder.com/700x400"
+                    alt="..."
+                /></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <p>Fall Guys</p>
+                  </h4>
+                  <h5>9.99</h5>
+                </div>
+                <div class="card-footer bg-light">
+                  <small class="text-muted">★ ★ ★ ★ ☆</small>
+                  <a class="btn btn-success ml-5" onclick="" href="#!"
+                    >Remove from wishlist</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 mb-4">
+              <div class="card rounded h-100">
+                <a href="#!"
+                  ><img
+                    class="card-img-top"
+                    src="https://via.placeholder.com/700x400"
+                    alt="..."
+                /></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <p>TikTok</p>
+                  </h4>
+                  <h5>9.99</h5>
+                </div>
+                <div class="card-footer bg-light">
+                  <small class="text-muted">★ ★ ★ ★ ☆</small>
+                  <a class="btn btn-success ml-5" onclick="" href="#!"
+                    >Remove from wishlist</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-light">
+      <div class="container">
+        <p class="m-0 text-center text-dark">Coded with ❤️</p>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

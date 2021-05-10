@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Google Play Store</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/play.svg" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#!">
+          <img
+            src="../assets/favicon.svg"
+            alt=""
+            width="150"
+            height="50"
+            class="d-inline-block align-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/all-apps">
+                Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <% if(!user) { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Sign Up</a>
+            </li>
+            <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/visited">Recently Visited</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/wishlist">My Wishlist</a>
+            </li>
+            <li class="nav-item">
+              <img
+                width="30"
+                src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+                class="rounded-circle my-1"
+              />
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <h3 class="my-4 text-dark">Explore</h3>
+          <div class="list-group">
+            <a class="list-group-item text-secondary" href="/all-apps">Apps</a>
+            <a class="list-group-item text-success" href="/all-games">Games</a>
+            <a class="list-group-item text-info" href="/all-books">Books</a>
+            <a class="list-group-item text-danger" href="/all-movies">Movies</a>
+          </div>
+        </div>
+        <div class="col-lg-9">
+          <div class="card mt-4">
+            <img
+              class="card-img-top img-fluid"
+              src="https://via.placeholder.com/900x400"
+              alt="..."
+            />
+            <div class="card-body">
+              <h3 class="card-title"><%= result.title %></h3>
+              <h4><%= result.price %></h4>
+              <p class="card-text"><%= result.description %></p>
+              <span class="text-warning">★ ★ ★ ★ ☆</span>
+              4.0 stars
+              <a class="btn btn-success" onclick="" href="#!"
+                >Add to wishlist</a
+              >
+            </div>
+          </div>
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">Product Reviews</div>
+            <div class="card-body">
+              <% reviews.forEach(function(review){ %>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis
+                et enim aperiam inventore, similique necessitatibus neque non!
+                Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
+                Sequi mollitia, necessitatibus quae sint natus. <%= review %>
+              </p>
+              <small class="text-muted">Posted by Anonymous on 3/1/21</small>
+              <hr />
+              <% }) %>
+              <div class="input-group">
+                <textarea
+                  class="form-control"
+                  aria-label="With textarea"
+                ></textarea>
+              </div>
+              <div>
+                <a class="btn btn-success" onclick="" href="#!"
+                  >Leave a Review</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-light">
+      <div class="container">
+        <p class="m-0 text-center text-dark">Coded with ❤️</p>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
